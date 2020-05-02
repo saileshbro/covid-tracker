@@ -34,11 +34,38 @@
   right: 0;
   text-align: center;
   .loginButton {
+    cursor: pointer;
     margin-top: 80px;
     background: #516be8;
     border-radius: 4px;
     display: inline-block;
-    padding: 7px 15px;
+    padding: 8px 20px;
+    font-size: 14px;
     color: white;
+  }
+}
+section#completeRegistration {
+  input,
+  select {
+    background: white;
+    padding: 8px 10px;
+    width: 55%;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  }
+  .selectField {
+    position: relative;
+    select {
+      width: calc(55% + 20px);
+      appearance: none;
+    }
+    img.icon {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      right: 21%;
+      top: 7px;
+    }
   }
 }

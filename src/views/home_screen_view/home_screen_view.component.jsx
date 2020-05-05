@@ -12,9 +12,41 @@ import { colors } from '../../utils/color'
 import { AppBar, IconButton } from './components'
 import { StaySafeText } from './components'
 import StatsProgressBar from '../../components/stats_progress_bar/stats_progress_bar.component'
+import calenderIcon from '../../assets/images/calendar.svg'
+import surveyIcon from '../../assets/images/survey.svg'
+import reportIcon from '../../assets/images/report.svg'
+import noticeIcon from '../../assets/images/bell.svg'
+
+import BottomSheet, {
+  BottomSheetIconButton,
+} from '../../components/bottom_sheet/bottom_sheet.component'
+import { useState } from 'react'
 export default function HomeScreenView() {
+  const [visible, setVisible] = useState(false)
   return (
     <section id='homeScreen'>
+      <BottomSheet visible={visible} onClose={() => setVisible(!visible)}>
+        <BottomSheetIconButton
+          color={colors.blue}
+          text='Events'
+          icon={calenderIcon}
+        />
+        <BottomSheetIconButton
+          color={colors.purple}
+          text='Survey'
+          icon={surveyIcon}
+        />
+        <BottomSheetIconButton
+          color={colors.orange}
+          text='Reports'
+          icon={reportIcon}
+        />
+        <BottomSheetIconButton
+          color={colors.blue}
+          text='Notices'
+          icon={noticeIcon}
+        />
+      </BottomSheet>
       <div className='wrap'>
         <AppBar name='Guest' />
         <StaySafeText />
@@ -28,7 +60,12 @@ export default function HomeScreenView() {
           />
           <IconButton icon={news} text='News' color={colors.orange} />
           <IconButton icon={chat} text='Chat' color={colors.purple} />
-          <IconButton icon={moreIcon} text='More' color={colors.yellow} />
+          <IconButton
+            icon={moreIcon}
+            text='More'
+            color={colors.yellow}
+            onClick={() => setVisible(!visible)}
+          />
         </div>
         <div className='gap x2'></div>
         <KnowMore />

@@ -6,6 +6,7 @@ import HomeScreenView from './views/home_screen_view/home_screen_view.component'
 import SurveyScreenView from './views/survey_screen_view.component'
 import ReportScreenView from './views/report_screen_view'
 import NoticeScreenView from './views/notice_screen_view.component'
+import EventsScreenView from './views/events_screen_view.component'
 function App() {
   return (
     <Switch>
@@ -19,6 +20,7 @@ function App() {
       <Route path='/survey' exact component={SurveyScreenView} />
       <Route path='/report' exact component={ReportScreenView} />
       <Route path='/notice' exact component={NoticeScreenView} />
+      <Route path='/events' exact component={EventsScreenView} />
     </Switch>
   )
 }

@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import nepalFlag from '../../assets/images/nepalFlag.png'
 import arrowButton from '../../assets/images/arrow_btn.svg'
@@ -9,19 +8,19 @@ import chat from '../../assets/images/message.svg'
 import moreIcon from '../../assets/images/Group.svg'
 import world from '../../assets/images/world.png'
 import { colors } from '../../utils/color'
-import { AppBar, IconButton } from './components'
+import { AppBar } from './components'
 import { StaySafeText } from './components'
 import StatsProgressBar from '../../components/stats_progress_bar/stats_progress_bar.component'
 import calenderIcon from '../../assets/images/calendar.svg'
 import surveyIcon from '../../assets/images/survey.svg'
 import reportIcon from '../../assets/images/report.svg'
 import noticeIcon from '../../assets/images/bell.svg'
-
 import BottomSheet, {
   BottomSheetIconButton,
 } from '../../components/bottom_sheet/bottom_sheet.component'
 import { useState } from 'react'
-export default function HomeScreenView() {
+import { IconButton } from '../../components/icon_button/icon_button.component'
+export default function HomeScreenView({ history }) {
   const [visible, setVisible] = useState(false)
   return (
     <section id='homeScreen'>
@@ -29,21 +28,25 @@ export default function HomeScreenView() {
         <BottomSheetIconButton
           color={colors.blue}
           text='Events'
+          onClick={() => history.push('/events')}
           icon={calenderIcon}
         />
         <BottomSheetIconButton
           color={colors.purple}
+          onClick={() => history.push('/survey')}
           text='Survey'
           icon={surveyIcon}
         />
         <BottomSheetIconButton
           color={colors.orange}
+          onClick={() => history.push('/report')}
           text='Reports'
           icon={reportIcon}
         />
         <BottomSheetIconButton
           color={colors.blue}
           text='Notices'
+          onClick={() => history.push('/notice')}
           icon={noticeIcon}
         />
       </BottomSheet>
@@ -187,7 +190,7 @@ export const GlobalStats = () => {
         />
       </div>
       <div className='textButton'>
-        <a href='#'>Statistics by Country</a>
+        <a href='!#'>Statistics by Country</a>
       </div>
       <footer>
         <p>Source: worldometers.info</p>

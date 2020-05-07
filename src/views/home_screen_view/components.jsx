@@ -25,13 +25,3 @@ export const StaySafeText = () => (
     </p>
   </div>
 )
-export const IconButton = ({ text, onClick, color, icon }) => {
-  return (
-    <div className='iconButton' onClick={onClick && onClick}>
-      <div className='shape' style={{ backgroundColor: color }}>
-        <img src={icon} alt='Icon' className='posCenter' />
-      </div>
-      {text && <p>{text}</p>}
-    </div>
-  )
-}

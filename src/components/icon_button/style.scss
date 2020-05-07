@@ -1,0 +1,26 @@
+.iconButton {
+  display: inline-block;
+
+  &.small {
+    transform: scale(0.8);
+  }
+
+  .shape {
+    width: 56px;
+    height: 56px;
+    position: relative;
+    border-radius: 8px;
+    background-color: var(--blue);
+  }
+
+  p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 3px 0;
+  }
+
+  img {
+    height: 25px;
+  }
+}

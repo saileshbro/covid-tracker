@@ -2,41 +2,52 @@
   --bg: #eff1f3;
   --blue: #516be8;
   --btnColor: #fff;
+  --shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
+
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   background-color: #eff1f3;
 }
+
 .gap {
   height: 10px;
+
   &.x2 {
     height: 20px;
   }
 }
+
 .wrap {
   width: 90%;
   margin: auto;
 }
+
 .flex {
   display: flex;
+
   &.jcsb {
     justify-content: space-between;
   }
+
   &.ci {
     align-items: center;
   }
 }
+
 .posCenter {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .hgap {
   display: inline-block;
   width: 10px;
   height: 1px;
+
   &.x2 {
     width: 20px;
   }

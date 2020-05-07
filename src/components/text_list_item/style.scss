@@ -1,0 +1,25 @@
+.textListItem {
+  border: 1px solid #f2f2f2;
+  padding: 7px 15px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+
+  .iconText {
+    .shape {
+      width: 8px;
+      height: 8px;
+      background: var(--blue);
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+}

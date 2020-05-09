@@ -61,7 +61,12 @@ export default function HomeScreenView({ history }) {
             text='Contacts'
             color={colors.blue}
           />
-          <IconButton icon={news} text='News' color={colors.orange} />
+          <IconButton
+            icon={news}
+            text='News'
+            onClick={() => history.push('/news')}
+            color={colors.orange}
+          />
           <IconButton icon={chat} text='Chat' color={colors.purple} />
           <IconButton
             icon={moreIcon}

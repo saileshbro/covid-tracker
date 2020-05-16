@@ -1,8 +1,8 @@
 import React from 'react'
-import './style.scss'
-import arrowIcon from '../../assets/images/arrow_back.svg'
-import { IconButton } from '../icon_button/icon_button.component'
+import arrowIcon from '../assets/images/arrow_back.svg'
+import { IconButton } from './icon_button'
 import { withRouter } from 'react-router-dom'
+import { SecScreenHead } from '../styled-components/index'
 export function SecondaryScreenNav({ history }) {
   return (
     <div className='secSereenNav' onClick={() => history.push('/home')}>
@@ -12,7 +12,7 @@ export function SecondaryScreenNav({ history }) {
 }
 
 const SecondaryScreenHead = ({ color, icon, title, subTitle, history }) => (
-  <div className='secScreenHead'>
+  <SecScreenHead>
     <div className='gap x2'></div>
     <div className='wrap'>
       <SecondaryScreenNav history={history} />
@@ -26,6 +26,6 @@ const SecondaryScreenHead = ({ color, icon, title, subTitle, history }) => (
       </header>
     </div>
     <div className='gap x2'></div>
-  </div>
+  </SecScreenHead>
 )
 export default withRouter(SecondaryScreenHead)

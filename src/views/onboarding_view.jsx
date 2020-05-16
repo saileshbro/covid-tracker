@@ -1,7 +1,6 @@
 import React from 'react'
-import OnboardingSwipeableView from '../components/onboarting_swipeable_view.component'
-import ActionButton from '../components/action_button.component'
-
+import OnboardingSwipeableView from '../components/onboarting_swipeable_view'
+import ActionButton from '../components/action_button'
 export default function OnboardingView({ history }) {
   const handleGoogleLogin = () => {
     // TODO do google login

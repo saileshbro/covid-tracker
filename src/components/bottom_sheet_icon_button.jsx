@@ -1,25 +1,10 @@
 import React from 'react'
-import './style.scss'
-export default function BottomSheet({ visible, onClose, children }) {
-  const handleClose = () => {
-    onClose && onClose()
-  }
-  return (
-    <React.Fragment>
-      {visible && (
-        <div className='bottomSheet'>
-          <div className='overlay' onClick={() => handleClose()}></div>
-          <div className='contents'>
-            <div className='line'></div>
-            {children}
-          </div>
-        </div>
-      )}
-    </React.Fragment>
-  )
-}
+import { BottomSheetButtonContainer } from '../styled-components/index'
+
 export const BottomSheetIconButton = ({ icon, text, color, onClick }) => (
-  <div className='bottomSheetButton flex jcsb ci' onClick={onClick && onClick}>
+  <BottomSheetButtonContainer
+    className='bottomSheetButton flex jcsb ci'
+    onClick={onClick && onClick}>
     <div className='iconText flex'>
       <div className='shape' style={{ backgroundColor: color }}>
         <img src={icon} className='posCenter' alt={text} />
@@ -39,5 +24,5 @@ export const BottomSheetIconButton = ({ icon, text, color, onClick }) => (
         />
       </svg>
     </div>
-  </div>
+  </BottomSheetButtonContainer>
 )

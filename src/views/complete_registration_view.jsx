@@ -1,6 +1,6 @@
 import React from 'react'
-import CompleteRegistration from '../components/complete_registration.component'
-import ActionButton from '../components/action_button.component'
+import CompleteRegistration from '../components/complete_registration'
+import ActionButton from '../components/action_button'
 
 export default function CompleteRegistrationView() {
   return (

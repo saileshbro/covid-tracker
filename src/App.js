@@ -1,13 +1,13 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import OnboardingView from './views/onboarding_view.component'
-import CompleteRegistrationView from './views/complete_registration_view.component'
-import HomeScreenView from './views/home_screen_view/home_screen_view.component'
-import SurveyScreenView from './views/survey_screen_view.component'
+import OnboardingView from './views/onboarding_view'
+import CompleteRegistrationView from './views/complete_registration_view'
+import HomeScreenView from './views/home_screen_view'
+import SurveyScreenView from './views/survey_screen_view'
 import ReportScreenView from './views/report_screen_view'
-import NoticeScreenView from './views/notice_screen_view.component'
-import EventsScreenView from './views/events_screen_view.component'
-import NewsScreenView from './views/news_screen_view.component'
+import NoticeScreenView from './views/notice_screen_view'
+import EventsScreenView from './views/events_screen_view'
+import NewsScreenView from './views/news_screen_view'
 function App() {
   return (
     <Switch>

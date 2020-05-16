@@ -1,8 +1,8 @@
 import React from 'react'
-import './style.scss'
+import { StatsProgressBarContainer } from '../styled-components'
 export default function StatsProgressBar({ keyz, value, color, width }) {
   return (
-    <div className='statsProgressbar'>
+    <StatsProgressBarContainer>
       <header>
         <p>{keyz}</p>
         <p>{value}</p>
@@ -11,6 +11,6 @@ export default function StatsProgressBar({ keyz, value, color, width }) {
       <div
         className='bar complete'
         style={{ backgroundColor: color, width: width }}></div>
-    </div>
+    </StatsProgressBarContainer>
   )
 }

@@ -3,15 +3,16 @@ import SwipeableViews from 'react-swipeable-views'
 import stayUpdatedImage from '../assets/images/stay_updated.svg'
 import readNewsImage from '../assets/images/read_news.svg'
 import stayAlertImage from '../assets/images/stay_alert.svg'
+import { Pagination, Dots, SwipeableItem } from '../styled-components'
 
 const Item = ({ image, desc, title }) => {
   return (
-    <div className='swipeableItem'>
+    <SwipeableItem>
       <img src={image} alt='Stay Updated' />
       <div className='gap'></div>
       <h3 className='title'>{title}</h3>
       <p className='desc'>{desc}</p>
-    </div>
+    </SwipeableItem>
   )
 }
 export default function OnboardingSwipeableView() {
@@ -37,11 +38,11 @@ export default function OnboardingSwipeableView() {
           desc='Lorem ipsum dolor sit amet.'
         />
       </SwipeableViews>
-      <div className='pagination'>
-        <div className={`dots ${isActive(0)}`}></div>
-        <div className={`dots ${isActive(1)}`}></div>
-        <div className={`dots ${isActive(2)}`}></div>
-      </div>
+      <Pagination>
+        <Dots active={isActive(0)}></Dots>
+        <Dots active={isActive(1)}></Dots>
+        <Dots active={isActive(2)}></Dots>
+      </Pagination>
     </div>
   )
 }

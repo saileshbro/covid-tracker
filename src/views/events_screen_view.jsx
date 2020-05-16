@@ -1,9 +1,9 @@
 import React from 'react'
-import SecondaryScreenHead from '../components/secondary_screen_head/secondary_screen_head.component'
 import { colors } from '../utils/color'
+import SecondaryScreenHead from '../components/secondary_screen_head'
 import eventIcon from '../assets/images/calendar.svg'
 import staticImage from '../assets/images/covid.jpg'
-import EventItem from '../components/event_item/event_item.component'
+import EventItem from '../components/event_item'
 
 export default function EventsScreenView() {
   return (

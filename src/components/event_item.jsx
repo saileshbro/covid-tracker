@@ -1,18 +1,19 @@
 import React from 'react'
-import { ReactComponent as CalIcon } from '../../assets/images/calendar.svg'
+import { ReactComponent as CalIcon } from '../assets/images/calendar.svg'
+import { EventItemContainer, EventItemHeader } from '../styled-components'
 export default function EventItem({ organizer, time, title, image }) {
   return (
-    <div className='eventItem'>
-      <header>
+    <EventItemContainer>
+      <EventItemHeader>
         <img src={image} alt='covid' />
         <div className='orgainzer'>
           <p>{organizer}</p>
         </div>
-      </header>
+      </EventItemHeader>
       <div className='wrap'>
         <div className='content flex jcsb ci'>
           <div className='left'>
-            <di className='time'>{time}</di>
+            <div className='time'>{time}</div>
             <div className='title'>{title}</div>
           </div>
           <div className='right'>
@@ -20,6 +21,6 @@ export default function EventItem({ organizer, time, title, image }) {
           </div>
         </div>
       </div>
-    </div>
+    </EventItemContainer>
   )
 }

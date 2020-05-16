@@ -1,8 +1,8 @@
 import React from 'react'
-import './style.scss'
+import { TextListItemContainer } from '../styled-components/index'
 export default function TextListItem({ text }) {
   return (
-    <div className='textListItem flex jcsb ci'>
+    <TextListItemContainer className='textListItem flex jcsb ci'>
       <div className='iconText flex ci'>
         <div className='shape'></div>
         <p>{text}</p>
@@ -20,6 +20,6 @@ export default function TextListItem({ text }) {
           />
         </svg>
       </div>
-    </div>
+    </TextListItemContainer>
   )
 }
